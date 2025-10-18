@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Interactive Demo</title>
+    <link rel="stylesheet" href="task3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 JavaScript Interactive Demo</h1>
+        <p class="subtitle">Exploring interactive elements, functions, and validation</p>
+
+        <!-- Dropdown -->
+        <div class="section">
+            <h2>1. Interactive Dropdown</h2>
+            <div class="dropdown" id="myDropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    Select Your Favorite Language
+                    <span>▼</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="selectOption('JavaScript'); return false;">JavaScript</a>
+                    <a href="#" onclick="selectOption('Python'); return false;">Python</a>
+                    <a href="#" onclick="selectOption('Java'); return false;">Java</a>
+                    <a href="#" onclick="selectOption('C++'); return false;">C++</a>
+                    <a href="#" onclick="selectOption('Ruby'); return false;">Ruby</a>
+                </div>
+            </div>
+            <div class="selected-option" id="selectedOption" style="display: none;"></div>
+        </div>
+
+        <!-- Counter with Functions -->
+        <div class="section">
+            <h2>2. Event Listeners & Functions</h2>
+            <div class="counter-display" id="counter">0</div>
+            <div class="counter-btns">
+                <button class="counter-btn" id="decrementBtn">− Decrease</button>
+                <button class="counter-btn reset" id="resetBtn">↻ Reset</button>
+                <button class="counter-btn" id="incrementBtn">+ Increase</button>
+            </div>
+        </div>
+
+        <!--  Modal -->
+        <div class="section">
+            <h2>3. Modal Dialog</h2>
+            <button class="modal-btn" id="openModal">Open Modal</button>
+        </div>
+
+        <!--  Form Validation -->
+        <div class="section">
+            <h2>4. Form Validation</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <input type="text" id="username" placeholder="At least 3 characters">
+                    <span class="error" id="usernameError">Username must be at least 3 characters</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                    <span class="error" id="emailError">Please enter a valid email address</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age *</label>
+                    <input type="number" id="age" placeholder="18-100">
+                    <span class="error" id="ageError">Age must be between 18 and 100</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Optional message"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Form</button>
+                <div class="success" id="successMessage">
+                    ✓ Form submitted successfully!
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Welcome to the Modal! 🎉</h2>
+            <p>This is an interactive modal dialog created with JavaScript. Modals are great for:</p>
+            <ul>
+                <li>Displaying important information</li>
+                <li>Showing forms or user inputs</li>
+                <li>Confirming actions</li>
+                <li>Presenting images or media</li>
+            </ul>
+            <p style="margin-top: 15px;">Click the X or outside the modal to close it.</p>
+        </div>
+    </div>
+
+    <script src="task3.js"></script>
+</body>
+</html>
